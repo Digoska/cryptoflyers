@@ -244,7 +244,7 @@ gdjs.copyArray(gdjs.evtsExt__ScoreCounter__ScoreCounter.ScoreCounter.prototype.d
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(12495412);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(13455628);
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.sound.playSound(runtimeScene, "Collect coin 1.wav", false, 100, eventsFunctionContext.sceneVariablesForExtension.getFromIndex(0).getAsNumber());
@@ -263,7 +263,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "RisingPitch") > 1;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(12497028);
+{isConditionTrue_0 = eventsFunctionContext.getOnceTriggers().triggerOnce(13457244);
 }
 }
 if (isConditionTrue_0) {
