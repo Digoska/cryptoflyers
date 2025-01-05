@@ -46,7 +46,6 @@ gdjs.copyArray(runtimeScene.getObjects("BlackRectangle"), gdjs.MenuCode.GDBlackR
 }{for(var i = 0, len = gdjs.MenuCode.GDBlackRectangleObjects2.length ;i < len;++i) {
     gdjs.MenuCode.GDBlackRectangleObjects2[i].getBehavior("Opacity").setOpacity(0);
 }
-}{gdjs.evtTools.sound.playMusic(runtimeScene, "spotifydown.com - Winners Circle2.mp3", true, 35, 1);
 }}
 
 }

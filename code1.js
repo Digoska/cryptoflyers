@@ -108,6 +108,7 @@ gdjs.copyArray(runtimeScene.getObjects("TappyPlane"), gdjs.GameCode.GDTappyPlane
 }{for(var i = 0, len = gdjs.GameCode.GDBlackRectObjects1.length ;i < len;++i) {
     gdjs.GameCode.GDBlackRectObjects1[i].getBehavior("Tween").addObjectOpacityTween2("FadeIn", 0, "linear", 0.25, true);
 }
+}{gdjs.evtTools.sound.playMusic(runtimeScene, "spotifydown.com - Winners Circle2.mp3", true, 35, 1);
 }}
 
 }
@@ -541,7 +542,34 @@ gdjs.GameCode.eventsList9(runtimeScene);} //End of subevents
 
 };gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDTappyPlaneObjects1Objects = Hashtable.newFrom({"TappyPlane": gdjs.GameCode.GDTappyPlaneObjects1});
 gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDTopPillarObjects1ObjectsGDgdjs_9546GameCode_9546GDBottomPillarObjects1ObjectsGDgdjs_9546GameCode_9546GDCeilingObjects1ObjectsGDgdjs_9546GameCode_9546GDGroundObjects1Objects = Hashtable.newFrom({"TopPillar": gdjs.GameCode.GDTopPillarObjects1, "BottomPillar": gdjs.GameCode.GDBottomPillarObjects1, "Ceiling": gdjs.GameCode.GDCeilingObjects1, "Ground": gdjs.GameCode.GDGroundObjects1});
+gdjs.GameCode.asyncCallback11145748 = function (runtimeScene, asyncObjectsList) {
+asyncObjectsList.restoreLocalVariablesContainers(gdjs.GameCode.localVariables);
+gdjs.copyArray(asyncObjectsList.getObjects("TappyPlane"), gdjs.GameCode.GDTappyPlaneObjects2);
+
+{gdjs.evtTools.sound.playSound(runtimeScene, "assets\\sfx_hit.wav", false, 100, 0.8);
+}{for(var i = 0, len = gdjs.GameCode.GDTappyPlaneObjects2.length ;i < len;++i) {
+    gdjs.GameCode.GDTappyPlaneObjects2[i].activateBehavior("PlatformerObject", false);
+}
+}gdjs.GameCode.localVariables.length = 0;
+}
 gdjs.GameCode.eventsList11 = function(runtimeScene) {
+
+{
+
+
+{
+{
+const asyncObjectsList = new gdjs.LongLivedObjectsList();
+asyncObjectsList.backupLocalVariablesContainers(gdjs.GameCode.localVariables);
+for (const obj of gdjs.GameCode.GDTappyPlaneObjects1) asyncObjectsList.addObject("TappyPlane", obj);
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.5), (runtimeScene) => (gdjs.GameCode.asyncCallback11145748(runtimeScene, asyncObjectsList)));
+}
+}
+
+}
+
+
+};gdjs.GameCode.eventsList12 = function(runtimeScene) {
 
 {
 
@@ -562,18 +590,17 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.object.hitBoxesCollisionTest(gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDTappyPlaneObjects1Objects, gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDTopPillarObjects1ObjectsGDgdjs_9546GameCode_9546GDBottomPillarObjects1ObjectsGDgdjs_9546GameCode_9546GDCeilingObjects1ObjectsGDgdjs_9546GameCode_9546GDGroundObjects1Objects, false, runtimeScene, false);
 if (isConditionTrue_0) {
-/* Reuse gdjs.GameCode.GDTappyPlaneObjects1 */
 {runtimeScene.getScene().getVariables().getFromIndex(0).setString("Gameover");
-}{gdjs.evtTools.sound.playSound(runtimeScene, "assets\\sfx_hit.wav", false, 100, 0.8);
-}{for(var i = 0, len = gdjs.GameCode.GDTappyPlaneObjects1.length ;i < len;++i) {
-    gdjs.GameCode.GDTappyPlaneObjects1[i].activateBehavior("PlatformerObject", false);
+}{gdjs.evtTools.sound.unloadAllAudio(runtimeScene);
 }
-}}
-
+{ //Subevents
+gdjs.GameCode.eventsList11(runtimeScene);} //End of subevents
 }
 
+}
 
-};gdjs.GameCode.eventsList12 = function(runtimeScene) {
+
+};gdjs.GameCode.eventsList13 = function(runtimeScene) {
 
 {
 
@@ -614,11 +641,11 @@ gdjs.GameCode.eventsList10(runtimeScene);
 {
 
 
-gdjs.GameCode.eventsList11(runtimeScene);
+gdjs.GameCode.eventsList12(runtimeScene);
 }
 
 
-};gdjs.GameCode.eventsList13 = function(runtimeScene) {
+};gdjs.GameCode.eventsList14 = function(runtimeScene) {
 
 {
 
@@ -629,14 +656,14 @@ isConditionTrue_0 = gdjs.evtTools.variable.getVariableString(runtimeScene.getSce
 if (isConditionTrue_0) {
 
 { //Subevents
-gdjs.GameCode.eventsList12(runtimeScene);} //End of subevents
+gdjs.GameCode.eventsList13(runtimeScene);} //End of subevents
 }
 
 }
 
 
 };gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDFlashObjects2Objects = Hashtable.newFrom({"Flash": gdjs.GameCode.GDFlashObjects2});
-gdjs.GameCode.eventsList14 = function(runtimeScene, asyncObjectsList) {
+gdjs.GameCode.eventsList15 = function(runtimeScene, asyncObjectsList) {
 
 {
 
@@ -683,10 +710,10 @@ gdjs.copyArray(runtimeScene.getObjects("Hearth"), gdjs.GameCode.GDHearthObjects3
 }
 }
 { //Subevents
-gdjs.GameCode.eventsList14(runtimeScene, asyncObjectsList);} //End of subevents
+gdjs.GameCode.eventsList15(runtimeScene, asyncObjectsList);} //End of subevents
 gdjs.GameCode.localVariables.length = 0;
 }
-gdjs.GameCode.eventsList15 = function(runtimeScene) {
+gdjs.GameCode.eventsList16 = function(runtimeScene) {
 
 {
 
@@ -703,7 +730,7 @@ runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.1)
 }
 
 
-};gdjs.GameCode.eventsList16 = function(runtimeScene) {
+};gdjs.GameCode.eventsList17 = function(runtimeScene) {
 
 {
 
@@ -721,7 +748,7 @@ gdjs.GameCode.GDFlashObjects2.length = 0;
 }
 }
 { //Subevents
-gdjs.GameCode.eventsList15(runtimeScene);} //End of subevents
+gdjs.GameCode.eventsList16(runtimeScene);} //End of subevents
 }
 
 }
@@ -771,7 +798,7 @@ if (isConditionTrue_0) {
 }
 
 
-};gdjs.GameCode.eventsList17 = function(runtimeScene) {
+};gdjs.GameCode.eventsList18 = function(runtimeScene) {
 
 {
 
@@ -782,7 +809,7 @@ isConditionTrue_0 = gdjs.evtTools.variable.getVariableString(runtimeScene.getSce
 if (isConditionTrue_0) {
 
 { //Subevents
-gdjs.GameCode.eventsList16(runtimeScene);} //End of subevents
+gdjs.GameCode.eventsList17(runtimeScene);} //End of subevents
 }
 
 }
@@ -795,7 +822,7 @@ gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDBottomPillarObjects1Objects = Hasht
 gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDHearthObjects1Objects = Hashtable.newFrom({"Hearth": gdjs.GameCode.GDHearthObjects1});
 gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDTappyPlaneObjects1Objects = Hashtable.newFrom({"TappyPlane": gdjs.GameCode.GDTappyPlaneObjects1});
 gdjs.GameCode.mapOfGDgdjs_9546GameCode_9546GDHearthObjects1Objects = Hashtable.newFrom({"Hearth": gdjs.GameCode.GDHearthObjects1});
-gdjs.GameCode.eventsList18 = function(runtimeScene) {
+gdjs.GameCode.eventsList19 = function(runtimeScene) {
 
 {
 
@@ -821,14 +848,14 @@ gdjs.GameCode.eventsList5(runtimeScene);
 {
 
 
-gdjs.GameCode.eventsList13(runtimeScene);
+gdjs.GameCode.eventsList14(runtimeScene);
 }
 
 
 {
 
 
-gdjs.GameCode.eventsList17(runtimeScene);
+gdjs.GameCode.eventsList18(runtimeScene);
 }
 
 
@@ -1084,7 +1111,7 @@ gdjs.GameCode.GDTappyPlane2Objects2.length = 0;
 gdjs.GameCode.GDTappyPlane2Objects3.length = 0;
 gdjs.GameCode.GDTappyPlane2Objects4.length = 0;
 
-gdjs.GameCode.eventsList18(runtimeScene);
+gdjs.GameCode.eventsList19(runtimeScene);
 gdjs.GameCode.GDLeaderboardDialogObjects1.length = 0;
 gdjs.GameCode.GDLeaderboardDialogObjects2.length = 0;
 gdjs.GameCode.GDLeaderboardDialogObjects3.length = 0;
