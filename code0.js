@@ -121,7 +121,7 @@ gdjs.MenuCode.eventsList2 = function(runtimeScene) {
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(13705292);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(13712564);
 }
 if (isConditionTrue_0) {
 gdjs.copyArray(gdjs.MenuCode.GDAuthorLinkObjects1, gdjs.MenuCode.GDAuthorLinkObjects2);
